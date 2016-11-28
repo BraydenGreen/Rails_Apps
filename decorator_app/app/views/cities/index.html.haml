@@ -1,0 +1,22 @@
+%h1
+%hr
+%table
+  %thead
+    %tr
+      %th Name
+      %th Altitude
+      %th Capitol
+  %tbody
+    - @cities.each do |city|
+      - decorated_city = city.decorate
+      %tr
+        %td
+          = link_to decorated_city.name, city_path(city)
+        %td 
+          = decorated_city.city_altitude
+        %td
+          = decorated_city.city_altitude
+%marquee 
+  Fantasy Football week 7 update:  Eli Manning ready to go.
+%center
+= will_paginate @cities

@@ -1,0 +1,21 @@
+%h1 Showing Animals for Zoo: #{@zoo.name}
+%hr
+- if @animals.any?
+  %ul
+    - @animals.each do |animal|
+      %li
+        = animal.name
+        |
+        = link_to 'Show', sti_animal_path(@zoo, @animal.race, animal)
+        |
+        = link_to 'Edit', sti_animal_path(@zoo, @animal.race, animal, :edit)
+        |
+        = link_to 'Destroy', sti_animal_path(@zoo, @animal.race, animal), method: 'delete', data: {confirm: 'Really Delete?'}
+- else
+  %h3 No animals in zoo.  Please add some.
+%br
+= link_to 'Add new Animal', new_zoo_animal_path(@zoo)
+%br
+= link_to 'Add New Bear', sti_animal_path(@zoo, 'Bear', nil, :new)
+= link_to 'Add New Lion', sti_animal_path(@zoo, 'Lion', nil, :new)
+= link_to 'Add New Elephant', sti_animal_path(@zoo, 'Elephant', nil, :new)

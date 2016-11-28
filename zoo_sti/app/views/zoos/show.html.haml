@@ -1,0 +1,13 @@
+%h1 Showing info for zoo #{@zoo.name}
+%hr
+%ul
+  %li
+    This Zoo has #{@zoo.bears.count} Bears
+  %li
+    This Zoo has #{@zoo.lions.count} Lions
+  %li
+    This Zoo has #{@zoo.elephants.count} Elephants
+  %li
+    This Zoo has #{@zoo.animals.count} Total Animals
+%hr
+= link_to 'Show Animals', sti_animal_path(@zoo)

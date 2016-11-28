@@ -1,0 +1,18 @@
+%h1 Zoos
+%hr
+%ul
+- if @zoos.any?
+  %ul
+    - @zoos.each do |zoo|
+      %li
+        = zoo.name
+        |
+        = link_to 'Show', zoo_path(zoo)
+        |
+        = link_to 'Edit', edit_zoo_path(zoo)
+        |
+        = link_to 'Destroy', zoo_path(zoo), method: 'delete', data: {confirm: 'Really Destroy?'}
+- else
+  %h3 No Zoos, Please Create One
+%hr
+= link_to 'New Zoo', new_zoo_path

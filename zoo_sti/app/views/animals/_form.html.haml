@@ -1,0 +1,5 @@
+= form_for [@zoo, @animal] do |f|
+  = f.text_field :name, placeholder: 'Animal Name'
+  = f.number_field :age, placeholder: 'Animal Age'
+  = f.select :race, Animal.races
+  = f.submit

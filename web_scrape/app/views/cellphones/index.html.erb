@@ -1,0 +1,10 @@
+<h1>Cellphones</h1>
+<hr></hr>
+<% @cellphones.each do |phone| %>
+<div>
+  <h3><%= phone.name %> </h3>
+  <image src="<%= phone.img_src %>" />
+  <h5><%= phone.price %></h5>
+  <i><%= phone.stars %></i>
+</div>
+<<% end -%>

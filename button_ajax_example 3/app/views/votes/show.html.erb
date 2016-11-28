@@ -1,0 +1,10 @@
+<h1> Votes </h1>
+<h3> Number of Up Votes: 
+  <span id="upvotes"> <%= @upvotes %> </span>
+</h3>
+<h3> Number of Down Votes: 
+  <span id="downvotes"> <%= @downvotes %> </span>
+</h3>
+<hr>
+<button class="vote_button" data-url="/upvote" data-element-id="upvotes">Up Vote</button>
+<button class="vote_button" data-url="/downvote" data-element-id="downvotes"> Down Vote</button>
